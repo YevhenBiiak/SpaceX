@@ -7,10 +7,6 @@
 
 import Foundation
 
-protocol SpacexAPI {
-    func fetchRockets(_ completion: ([String]) -> Void)
-}
-
 protocol HomePresentationLogic {
     func presentItems(response: Home.FetchItems.Response)
 }
@@ -19,21 +15,23 @@ class HomeInteractor: HomeBusinessLogic, HomeDataStore {
     
     var presenter: HomePresentationLogic?
     
-    var spacexAPI: SpacexAPI?
-    
     func fetchItems(request: Home.FetchItems.Request) {
-        spacexAPI?.fetchRockets { rockets in
-            
+        SpacexAPI.fetchRockets { [weak self] result in
+            switch result {
+            case .success(let rockets):
+                let items: [Home.Item] = rockets.compactMap { rocket in
+                    rocket.id != nil && rocket.name != nil && rocket.description != nil
+                        ? Home.Item(id: rocket.id!, name: rocket.name!, description: rocket.description!)
+                        : nil
+                }
+                
+                let response = Home.FetchItems.Response(items: items)
+                self?.presenter?.presentItems(response: response)
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
         }
-        let array = [
-            Home.Item(title: "Falcon 1"),
-            Home.Item(title: "Falcon 9"),
-            Home.Item(title: "Falcon heavy"),
-            Home.Item(title: "Missions"),
-            Home.Item(title: "Launches")
-        ]
-        let response = Home.FetchItems.Response(items: array)
         
-        presenter?.presentItems(response: response)
     }
 }

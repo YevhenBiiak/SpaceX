@@ -10,7 +10,9 @@ import UIKit
 enum Home {
     
     struct Item {
-        let title: String
+        var id = String()
+        let name: String
+        let description: String
         var image: UIImage?
     }
     
@@ -22,6 +24,7 @@ enum Home {
             var items: [Item]
         }
         struct ViewModel {
+            let id: String
             let title: String
             let description: String
             let image: UIImage

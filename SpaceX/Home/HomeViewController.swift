@@ -7,8 +7,10 @@
 
 import UIKit
 
-protocol HomeRoutingLogic: NSObjectProtocol {
-    
+@objc protocol HomeRoutingLogic: NSObjectProtocol {
+    func routeToRocket(segue: UIStoryboardSegue?)
+    func routeToMissions(segue: UIStoryboardSegue?)
+    func routeToLaunches(segue: UIStoryboardSegue?)
 }
 
 protocol HomeBusinessLogic {
@@ -33,6 +35,15 @@ class HomeViewController: UIViewController {
         
         let request = Home.FetchItems.Request()
         interactor?.fetchItems(request: request)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let scene = segue.identifier {
+            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
+            if let router = router, router.responds(to: selector) {
+                router.perform(selector, with: segue)
+            }
+        }
     }
     
     private func setBackgroundImage() {
@@ -90,7 +101,15 @@ extension HomeViewController: UITableViewDataSource {
 extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
+        let item = items[indexPath.row]
+        switch item.title.lowercased() {
+        case "missions":
+            performSegue(withIdentifier: "Missions", sender: nil)
+        case "launches":
+            performSegue(withIdentifier: "Launches", sender: nil)
+        default:
+            performSegue(withIdentifier: "Rocket", sender: nil)
+        }
     }
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {

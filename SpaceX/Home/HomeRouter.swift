@@ -5,7 +5,7 @@
 //  Created by Yevhen Biiak on 08.04.2023.
 //
 
-import Foundation
+import UIKit
 
 protocol HomeDataStore {
     //var items: [Item] { get }
@@ -19,4 +19,16 @@ class HomeRouter: NSObject, HomeRoutingLogic, HomeDataPassing {
     
     weak var viewController: HomeViewController?
     var dataStore: HomeDataStore?
+    
+    func routeToRocket(segue: UIStoryboardSegue?) {
+        
+    }
+    
+    func routeToMissions(segue: UIStoryboardSegue?) {
+        
+    }
+    
+    func routeToLaunches(segue: UIStoryboardSegue?) {
+        
+    }
 }
