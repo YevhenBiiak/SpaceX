@@ -33,32 +33,52 @@
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="08o-sa-Cbt">
                                                     <rect key="frame" x="0.0" y="0.0" width="393" height="256"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="FALCON 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38p-ow-Kaz">
+                                                            <rect key="frame" x="16" y="16" width="361" height="40"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="h8e-eQ-YQ4"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="30"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zW-AV-y8q">
+                                                            <rect key="frame" x="16" y="72" width="361" height="168"/>
+                                                            <string key="text">The Falcon 1 was an expendable launch system privately developed and manufactured by SpaceX during 2006-2009. On 28 September 2008, Falcon 1 became the first privately-developed liquid-fuel launch vehicle to go into orbit around the Earth.</string>
+                                                            <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="16"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="38p-ow-Kaz" firstAttribute="leading" secondItem="08o-sa-Cbt" secondAttribute="leading" constant="16" id="77b-7B-cYN"/>
+                                                        <constraint firstAttribute="trailing" secondItem="9zW-AV-y8q" secondAttribute="trailing" constant="16" id="Hmd-G8-wKE"/>
+                                                        <constraint firstItem="9zW-AV-y8q" firstAttribute="top" secondItem="38p-ow-Kaz" secondAttribute="bottom" constant="16" id="IF0-EX-BSq"/>
+                                                        <constraint firstAttribute="bottom" secondItem="9zW-AV-y8q" secondAttribute="bottom" constant="16" id="W2V-9K-Ozs"/>
+                                                        <constraint firstAttribute="trailing" secondItem="38p-ow-Kaz" secondAttribute="trailing" constant="16" id="k9d-Pn-X4v"/>
+                                                        <constraint firstItem="9zW-AV-y8q" firstAttribute="leading" secondItem="08o-sa-Cbt" secondAttribute="leading" constant="16" id="mvb-Eb-bv4"/>
+                                                        <constraint firstItem="38p-ow-Kaz" firstAttribute="top" secondItem="08o-sa-Cbt" secondAttribute="top" constant="16" id="zq3-hJ-6i4"/>
+                                                    </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FALCON 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38p-ow-Kaz">
-                                                    <rect key="frame" x="16" y="203.33333333333334" width="361" height="36.666666666666657"/>
-                                                    <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="30"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="38p-ow-Kaz" secondAttribute="trailing" constant="16" id="2gq-Ed-PsN"/>
                                                 <constraint firstItem="wZt-EL-eDg" firstAttribute="top" secondItem="Wca-vR-U5U" secondAttribute="top" id="3oV-Ep-bek"/>
+                                                <constraint firstItem="08o-sa-Cbt" firstAttribute="top" secondItem="Wca-vR-U5U" secondAttribute="top" id="4JL-rv-Zcj"/>
                                                 <constraint firstAttribute="bottom" secondItem="wZt-EL-eDg" secondAttribute="bottom" id="8vz-9v-DwR"/>
-                                                <constraint firstItem="08o-sa-Cbt" firstAttribute="top" secondItem="Wca-vR-U5U" secondAttribute="top" id="HLa-gE-F0W"/>
-                                                <constraint firstAttribute="bottom" secondItem="08o-sa-Cbt" secondAttribute="bottom" id="ei5-Tw-gpt"/>
-                                                <constraint firstAttribute="bottom" secondItem="38p-ow-Kaz" secondAttribute="bottom" constant="16" id="hdL-Qk-xXl"/>
-                                                <constraint firstAttribute="trailing" secondItem="08o-sa-Cbt" secondAttribute="trailing" id="j69-he-UiH"/>
+                                                <constraint firstItem="08o-sa-Cbt" firstAttribute="centerX" secondItem="Wca-vR-U5U" secondAttribute="centerX" id="b4d-GN-6GV"/>
                                                 <constraint firstItem="wZt-EL-eDg" firstAttribute="leading" secondItem="Wca-vR-U5U" secondAttribute="leading" id="kQi-iC-ydj"/>
-                                                <constraint firstItem="38p-ow-Kaz" firstAttribute="leading" secondItem="Wca-vR-U5U" secondAttribute="leading" constant="16" id="lk5-hx-rua"/>
                                                 <constraint firstAttribute="trailing" secondItem="wZt-EL-eDg" secondAttribute="trailing" id="oc5-QF-FyZ"/>
-                                                <constraint firstItem="08o-sa-Cbt" firstAttribute="leading" secondItem="Wca-vR-U5U" secondAttribute="leading" id="z1Y-s6-ZLc"/>
+                                                <constraint firstItem="08o-sa-Cbt" firstAttribute="height" secondItem="Wca-vR-U5U" secondAttribute="height" id="vVE-Ij-SaZ"/>
+                                                <constraint firstItem="08o-sa-Cbt" firstAttribute="width" secondItem="Wca-vR-U5U" secondAttribute="width" id="vnV-fG-Xln"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="backgroundImageView" destination="wZt-EL-eDg" id="8ds-Xj-dfT"/>
-                                            <outlet property="gradientView" destination="08o-sa-Cbt" id="Las-gg-4ef"/>
+                                            <outlet property="contentTopConstraint" destination="4JL-rv-Zcj" id="T1w-a7-tzz"/>
+                                            <outlet property="descriptionLabel" destination="9zW-AV-y8q" id="000-vo-tvL"/>
+                                            <outlet property="myContentView" destination="08o-sa-Cbt" id="4bE-iN-onv"/>
                                             <outlet property="titleLabel" destination="38p-ow-Kaz" id="GQ1-mP-RXU"/>
                                         </connections>
                                     </tableViewCell>

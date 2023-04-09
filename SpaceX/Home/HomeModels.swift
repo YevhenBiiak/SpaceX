@@ -22,14 +22,9 @@ enum Home {
             var items: [Item]
         }
         struct ViewModel {
-            struct Item {
-                let title: String
-                let image: UIImage
-            }
-            
             let title: String
+            let description: String
             let image: UIImage
-//            var items: [Item]
         }
     }
 }

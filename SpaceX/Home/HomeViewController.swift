@@ -92,5 +92,14 @@ extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        tableView.deselectRow(at: indexPath, animated: true)
     }
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        tableView.visibleCells.forEach { $0.isSelected = false }
+        let location = scrollView.panGestureRecognizer.location(in: tableView)
+        if let indexPath = tableView.indexPathForRow(at: location) {
+            let cell = tableView.cellForRow(at: indexPath)
+            cell?.isSelected = true
+        }
+    }
 }
 
