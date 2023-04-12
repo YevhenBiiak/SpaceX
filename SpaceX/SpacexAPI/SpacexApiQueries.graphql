@@ -1,7 +1,19 @@
+
 query RocketNamesAndDescriptions {
   rockets {
     id
     name
     description
+  }
+}
+
+query Launches {
+  launches {
+    id
+    mission_name
+    links {
+      flickr_images
+    }
+    launch_date_local
   }
 }

@@ -29,7 +29,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="256"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="falcon_1_launch" translatesAutoresizingMaskIntoConstraints="NO" id="wZt-EL-eDg">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wZt-EL-eDg">
                                                     <rect key="frame" x="0.0" y="0.0" width="393" height="256"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="08o-sa-Cbt">
@@ -128,17 +128,28 @@
             </objects>
             <point key="canvasLocation" x="1827" y="368"/>
         </scene>
-        <!--View Controller-->
+        <!--Launches View Controller-->
         <scene sceneID="AFx-cc-6eP">
             <objects>
-                <viewController id="omX-tR-SwB" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LaunchesViewController" id="omX-tR-SwB" customClass="LaunchesViewController" customModule="SpaceX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="suB-h3-Abn">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spacex_bg" translatesAutoresizingMaskIntoConstraints="NO" id="tSE-Aq-VTA">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MLX-vS-WUX">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="NuS-rY-qny">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="systemMaterialDark"/>
+                            </visualEffectView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vaz-dJ-3P6">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Vor-pB-PcK">
                                     <size key="itemSize" width="178" height="173"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -146,26 +157,26 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="8T1-5S-a1t">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LaunchViewCell" id="8T1-5S-a1t" customClass="LaunchViewCell" customModule="SpaceX" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Mus-UP-faG">
                                             <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G7I-Ah-svL">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G7I-Ah-svL">
                                                     <rect key="frame" x="0.0" y="0.0" width="190" height="130.66666666666666"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SES-18 AND SES-19 MISSION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zn-NB-THw">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="SES-18 AND SES-19 MISSION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zn-NB-THw">
                                                     <rect key="frame" x="8" y="161" width="174" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MARCH 17, 2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72v-0p-naU">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="MARCH 17, 2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72v-0p-naU">
                                                     <rect key="frame" x="8" y="138.66666666666666" width="174" height="14.333333333333343"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -183,20 +194,40 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="190" height="190"/>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="72v-0p-naU" id="kW3-L1-9ru"/>
+                                            <outlet property="imageView" destination="G7I-Ah-svL" id="EJv-rD-joP"/>
+                                            <outlet property="titleLabel" destination="7zn-NB-THw" id="zhY-Ac-XT6"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="omX-tR-SwB" id="UOr-E4-g5k"/>
+                                    <outlet property="delegate" destination="omX-tR-SwB" id="7xA-0W-iSY"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oUs-ZK-eJu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="MLX-vS-WUX" firstAttribute="leading" secondItem="oUs-ZK-eJu" secondAttribute="leading" id="10p-NB-ttk"/>
+                            <constraint firstItem="oUs-ZK-eJu" firstAttribute="trailing" secondItem="tSE-Aq-VTA" secondAttribute="trailing" id="49E-Sf-j3s"/>
+                            <constraint firstItem="oUs-ZK-eJu" firstAttribute="trailing" secondItem="MLX-vS-WUX" secondAttribute="trailing" id="9hF-RW-LgI"/>
                             <constraint firstItem="oUs-ZK-eJu" firstAttribute="trailing" secondItem="vaz-dJ-3P6" secondAttribute="trailing" id="Bmv-vF-yPX"/>
+                            <constraint firstAttribute="bottom" secondItem="tSE-Aq-VTA" secondAttribute="bottom" id="MDb-yN-YKm"/>
                             <constraint firstAttribute="bottomMargin" secondItem="vaz-dJ-3P6" secondAttribute="bottom" id="QPH-0x-AlT"/>
+                            <constraint firstItem="tSE-Aq-VTA" firstAttribute="top" secondItem="suB-h3-Abn" secondAttribute="top" id="Zy1-7t-C58"/>
                             <constraint firstItem="vaz-dJ-3P6" firstAttribute="top" secondItem="suB-h3-Abn" secondAttribute="top" id="gPg-Cr-UKK"/>
                             <constraint firstItem="vaz-dJ-3P6" firstAttribute="leading" secondItem="oUs-ZK-eJu" secondAttribute="leading" id="gdD-IW-t6z"/>
+                            <constraint firstItem="MLX-vS-WUX" firstAttribute="top" secondItem="suB-h3-Abn" secondAttribute="top" id="jzk-a0-kr6"/>
+                            <constraint firstItem="tSE-Aq-VTA" firstAttribute="leading" secondItem="oUs-ZK-eJu" secondAttribute="leading" id="x7v-hB-Osc"/>
+                            <constraint firstAttribute="bottom" secondItem="MLX-vS-WUX" secondAttribute="bottom" id="zjI-vN-1EG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="da4-9L-4Af"/>
+                    <connections>
+                        <outlet property="collectionView" destination="vaz-dJ-3P6" id="4RE-xM-XCZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dla-Zf-iss" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -240,7 +271,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="falcon_1_launch" width="3000" height="2000"/>
+        <image name="spacex_bg" width="942" height="1152"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
