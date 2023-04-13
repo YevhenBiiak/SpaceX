@@ -11,9 +11,27 @@ query Launches {
   launches {
     id
     mission_name
+    details
+    upcoming
+    launch_date_local
     links {
       flickr_images
     }
-    launch_date_local
+    rocket {
+      rocket {
+        id
+        name
+        description
+        height {
+          meters
+        }
+        diameter {
+          meters
+        }
+        mass {
+          kg
+        }
+      }
+    }
   }
 }

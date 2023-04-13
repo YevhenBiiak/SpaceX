@@ -22,16 +22,26 @@ class LaunchesViewController: UIViewController {
     var interactor: LaunchesBusinessLogic?
     var router: LaunchesRoutingLogic?
     
-    private var launches: [Launches.FetchLaunches.ViewModel] = []
+    private var viewModels: [Launches.FetchLaunches.ViewModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.backButtonTitle = ""
         configureCollectinView()
         
         LaunchesConfigurator.configure(with: self)
         
         let request = Launches.FetchLaunches.Request()
         interactor?.fetchLaunches(request: request)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let scene = segue.identifier {
+            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
+            if let router = router, router.responds(to: selector) {
+                router.perform(selector, with: segue)
+            }
+        }
     }
     
     private func configureCollectinView() {
@@ -57,8 +67,8 @@ class LaunchesViewController: UIViewController {
 
 extension LaunchesViewController: LaunchesDisplayLogic {
     
-    func display(launches: [Launches.FetchLaunches.ViewModel]) {
-        self.launches = launches
+    func display(viewModels: [Launches.FetchLaunches.ViewModel]) {
+        self.viewModels = viewModels
         collectionView.reloadData()
     }
 }
@@ -66,19 +76,15 @@ extension LaunchesViewController: LaunchesDisplayLogic {
 extension LaunchesViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        launches.count
+        viewModels.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LaunchViewCell.reuseId, for: indexPath)
         
-        (cell as? LaunchViewCell)?.viewModel = launches[indexPath.row]
+        (cell as? LaunchViewCell)?.viewModel = viewModels[indexPath.row]
         
         return cell
     }
-    
-}
-
-extension LaunchesViewController: UICollectionViewDelegate {
     
 }

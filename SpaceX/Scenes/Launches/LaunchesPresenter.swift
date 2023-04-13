@@ -8,7 +8,7 @@
 import UIKit
 
 protocol LaunchesDisplayLogic: AnyObject {
-    func display(launches: [Launches.FetchLaunches.ViewModel])
+    func display(viewModels: [Launches.FetchLaunches.ViewModel])
 }
 
 class LaunchesPresenter: LaunchesPresentationLogic {
@@ -23,6 +23,6 @@ class LaunchesPresenter: LaunchesPresentationLogic {
             return Launches.FetchLaunches.ViewModel(id: launch.id, date: date, title: launch.mission, imageURL: imageURL)
         }
         
-        view?.display(launches: viewModels)
+        view?.display(viewModels: viewModels)
     }
 }

@@ -9,19 +9,12 @@ import UIKit
 
 enum Launches {
     
-    struct Item {
-        var id: String
-        let date: Date
-        let mission: String
-        var imageURLs: [URL]
-    }
-    
     // MARK: Use cases
     
     enum FetchLaunches {
         struct Request {}
         struct Response {
-            var launches: [Item]
+            var launches: [Launch]
         }
         struct ViewModel {
             let id: String

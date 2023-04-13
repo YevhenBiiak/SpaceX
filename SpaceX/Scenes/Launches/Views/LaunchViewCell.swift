@@ -14,22 +14,19 @@ class LaunchViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var viewModel: Launches.FetchLaunches.ViewModel? {
         didSet {
+            activityIndicator.startAnimating()
             titleLabel.text = viewModel?.title.uppercased()
             dateLabel.text = viewModel?.date.uppercased()
-            
-            if let image = ImageCache.shared.get(for: viewModel?.imageURL) {
-                imageView.setImage(image)
-            } else {
-                let imageRequest = ImageRequest(url: viewModel?.imageURL)
-                imageRequest.execute { [weak self] image in
-                    image?.prepare(for: self?.imageView) { imageView, image in
-                        ImageCache.shared.set(image, for: imageRequest.url)
-                        if imageRequest.url == self?.viewModel?.imageURL {
-                            imageView?.image = image
-                        }
+            let imageRequest = ImageRequest(url: viewModel?.imageURL)
+            imageRequest.execute { [weak self] image in
+                image?.prepare(for: self?.imageView) { imageView, image in
+                    if imageRequest.url == self?.viewModel?.imageURL {
+                        self?.activityIndicator.stopAnimating()
+                        imageView?.image = image
                     }
                 }
             }

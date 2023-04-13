@@ -20,13 +20,13 @@ class HomeInteractor: HomeBusinessLogic, HomeDataStore {
         SpacexAPI.fetchRockets { [weak self] result in
             switch result {
             case .success(let apiRockets):
-                let items: [Home.Item] = apiRockets.compactMap { rocket in
+                let items: [Home.Model] = apiRockets.compactMap { rocket in
                     guard let id = rocket.id,
                           let name = rocket.name,
                           let description = rocket.description
                     else { return nil }
                     
-                    return Home.Item(id: id, name: name, description: description)
+                    return Home.Model(id: id, name: name, description: description)
                 }
                 
                 let response = Home.FetchItems.Response(items: items)

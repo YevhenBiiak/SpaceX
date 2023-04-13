@@ -1,5 +1,5 @@
 //
-//  UIImageView.swift
+//  UIImageView + .swift
 //  SpaceX
 //
 //  Created by Yevhen Biiak on 10.04.2023.

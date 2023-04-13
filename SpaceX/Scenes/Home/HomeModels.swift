@@ -9,7 +9,7 @@ import UIKit
 
 enum Home {
     
-    struct Item {
+    struct Model {
         var id = String()
         let name: String
         let description: String
@@ -21,7 +21,7 @@ enum Home {
     enum FetchItems {
         struct Request {}
         struct Response {
-            var items: [Item]
+            var items: [Model]
         }
         struct ViewModel {
             let id: String

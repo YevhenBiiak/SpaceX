@@ -15,22 +15,31 @@
 		5727174329E31A9D004F80BA /* LaunchesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727174229E31A9D004F80BA /* LaunchesPresenter.swift */; };
 		5727174529E31AAC004F80BA /* LaunchesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727174429E31AAC004F80BA /* LaunchesInteractor.swift */; };
 		5727174729E31BC2004F80BA /* LaunchesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727174629E31BC2004F80BA /* LaunchesRouter.swift */; };
-		5727175729E31E0D004F80BA /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727174A29E31E0C004F80BA /* Date.swift */; };
-		5727175829E31E0D004F80BA /* LaunchLinks.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727174C29E31E0C004F80BA /* LaunchLinks.graphql.swift */; };
-		5727175929E31E0D004F80BA /* Launch.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727174D29E31E0C004F80BA /* Launch.graphql.swift */; };
-		5727175A29E31E0D004F80BA /* Rocket.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727174E29E31E0C004F80BA /* Rocket.graphql.swift */; };
-		5727175B29E31E0D004F80BA /* Query.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727174F29E31E0C004F80BA /* Query.graphql.swift */; };
-		5727175C29E31E0D004F80BA /* SchemaConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727175029E31E0C004F80BA /* SchemaConfiguration.swift */; };
-		5727175D29E31E0D004F80BA /* SchemaMetadata.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727175129E31E0C004F80BA /* SchemaMetadata.graphql.swift */; };
-		5727175E29E31E0D004F80BA /* RocketNamesAndDescriptionsQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727175429E31E0C004F80BA /* RocketNamesAndDescriptionsQuery.graphql.swift */; };
-		5727175F29E31E0D004F80BA /* LaunchesQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727175529E31E0C004F80BA /* LaunchesQuery.graphql.swift */; };
 		5727176029E31E0D004F80BA /* SpacexAPI.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727175629E31E0D004F80BA /* SpacexAPI.graphql.swift */; };
 		5727176229E32F1B004F80BA /* Date + .swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727176129E32F1B004F80BA /* Date + .swift */; };
 		5727176629E33049004F80BA /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727176529E33049004F80BA /* NetworkRequest.swift */; };
 		5727176829E3305E004F80BA /* ImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727176729E3305E004F80BA /* ImageRequest.swift */; };
 		5727176A29E334CC004F80BA /* LaunchesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727176929E334CC004F80BA /* LaunchesConfigurator.swift */; };
-		57289FCD29E4821800B3CB2C /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57289FCC29E4821800B3CB2C /* UIImageView.swift */; };
-		57526BE529E44CAD00C6A8FC /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57526BE429E44CAD00C6A8FC /* ImageCache.swift */; };
+		57289FCD29E4821800B3CB2C /* UIImageView + .swift in Sources */ = {isa = PBXBuildFile; fileRef = 57289FCC29E4821800B3CB2C /* UIImageView + .swift */; };
+		57289FF129E6CD9000B3CB2C /* LaunchDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57289FEB29E6CD9000B3CB2C /* LaunchDetailsInteractor.swift */; };
+		57289FF229E6CD9000B3CB2C /* LaunchDetailsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57289FEC29E6CD9000B3CB2C /* LaunchDetailsConfigurator.swift */; };
+		57289FF329E6CD9000B3CB2C /* LaunchDetailsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57289FED29E6CD9000B3CB2C /* LaunchDetailsModels.swift */; };
+		57289FF429E6CD9000B3CB2C /* LaunchDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57289FEE29E6CD9000B3CB2C /* LaunchDetailsRouter.swift */; };
+		57289FF529E6CD9000B3CB2C /* LaunchDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57289FEF29E6CD9000B3CB2C /* LaunchDetailsPresenter.swift */; };
+		57289FF629E6CD9000B3CB2C /* LaunchDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57289FF029E6CD9000B3CB2C /* LaunchDetailsViewController.swift */; };
+		5728A01729E7038200B3CB2C /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5728A01629E7038200B3CB2C /* Launch.swift */; };
+		5728A02929E707B400B3CB2C /* RocketNamesAndDescriptionsQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5728A01A29E707B400B3CB2C /* RocketNamesAndDescriptionsQuery.graphql.swift */; };
+		5728A02A29E707B400B3CB2C /* LaunchesQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5728A01B29E707B400B3CB2C /* LaunchesQuery.graphql.swift */; };
+		5728A02B29E707B400B3CB2C /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5728A01E29E707B400B3CB2C /* Date.swift */; };
+		5728A02C29E707B400B3CB2C /* LaunchLinks.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5728A02029E707B400B3CB2C /* LaunchLinks.graphql.swift */; };
+		5728A02D29E707B400B3CB2C /* Launch.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5728A02129E707B400B3CB2C /* Launch.graphql.swift */; };
+		5728A02E29E707B400B3CB2C /* Rocket.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5728A02229E707B400B3CB2C /* Rocket.graphql.swift */; };
+		5728A02F29E707B400B3CB2C /* Distance.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5728A02329E707B400B3CB2C /* Distance.graphql.swift */; };
+		5728A03029E707B400B3CB2C /* LaunchRocket.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5728A02429E707B400B3CB2C /* LaunchRocket.graphql.swift */; };
+		5728A03129E707B400B3CB2C /* Query.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5728A02529E707B400B3CB2C /* Query.graphql.swift */; };
+		5728A03229E707B400B3CB2C /* Mass.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5728A02629E707B400B3CB2C /* Mass.graphql.swift */; };
+		5728A03329E707B400B3CB2C /* SchemaConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5728A02729E707B400B3CB2C /* SchemaConfiguration.swift */; };
+		5728A03429E707B400B3CB2C /* SchemaMetadata.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5728A02829E707B400B3CB2C /* SchemaMetadata.graphql.swift */; };
 		57962D2E29DDF9F700747D54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57962D2D29DDF9F700747D54 /* AppDelegate.swift */; };
 		57962D3029DDF9F700747D54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57962D2F29DDF9F700747D54 /* SceneDelegate.swift */; };
 		57962D3229DDF9F700747D54 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57962D3129DDF9F700747D54 /* HomeViewController.swift */; };
@@ -38,6 +47,8 @@
 		57962D3729DDF9F900747D54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57962D3629DDF9F900747D54 /* Assets.xcassets */; };
 		57962D3A29DDF9F900747D54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57962D3829DDF9F900747D54 /* LaunchScreen.storyboard */; };
 		57962D4329DEFD8F00747D54 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 57962D4229DEFD8F00747D54 /* Apollo */; };
+		57C8E8D529E70FE3005AF9DC /* LaunchImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C8E8D429E70FE3005AF9DC /* LaunchImageCell.swift */; };
+		57C8E8D729E72E16005AF9DC /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C8E8D629E72E16005AF9DC /* SplashViewController.swift */; };
 		57F14CA329DF3BD900A32207 /* UIImage + .swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F14CA229DF3BD900A32207 /* UIImage + .swift */; };
 		57F14CA529DF421500A32207 /* UIColor + .swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F14CA429DF421500A32207 /* UIColor + .swift */; };
 		57F14CA729DF437400A32207 /* UIApplication + .swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F14CA629DF437400A32207 /* UIApplication + .swift */; };
@@ -58,22 +69,31 @@
 		5727174229E31A9D004F80BA /* LaunchesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesPresenter.swift; sourceTree = "<group>"; };
 		5727174429E31AAC004F80BA /* LaunchesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesInteractor.swift; sourceTree = "<group>"; };
 		5727174629E31BC2004F80BA /* LaunchesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesRouter.swift; sourceTree = "<group>"; };
-		5727174A29E31E0C004F80BA /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
-		5727174C29E31E0C004F80BA /* LaunchLinks.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchLinks.graphql.swift; sourceTree = "<group>"; };
-		5727174D29E31E0C004F80BA /* Launch.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Launch.graphql.swift; sourceTree = "<group>"; };
-		5727174E29E31E0C004F80BA /* Rocket.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rocket.graphql.swift; sourceTree = "<group>"; };
-		5727174F29E31E0C004F80BA /* Query.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Query.graphql.swift; sourceTree = "<group>"; };
-		5727175029E31E0C004F80BA /* SchemaConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaConfiguration.swift; sourceTree = "<group>"; };
-		5727175129E31E0C004F80BA /* SchemaMetadata.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaMetadata.graphql.swift; sourceTree = "<group>"; };
-		5727175429E31E0C004F80BA /* RocketNamesAndDescriptionsQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RocketNamesAndDescriptionsQuery.graphql.swift; sourceTree = "<group>"; };
-		5727175529E31E0C004F80BA /* LaunchesQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchesQuery.graphql.swift; sourceTree = "<group>"; };
 		5727175629E31E0D004F80BA /* SpacexAPI.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpacexAPI.graphql.swift; sourceTree = "<group>"; };
 		5727176129E32F1B004F80BA /* Date + .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + .swift"; sourceTree = "<group>"; };
 		5727176529E33049004F80BA /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		5727176729E3305E004F80BA /* ImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRequest.swift; sourceTree = "<group>"; };
 		5727176929E334CC004F80BA /* LaunchesConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesConfigurator.swift; sourceTree = "<group>"; };
-		57289FCC29E4821800B3CB2C /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
-		57526BE429E44CAD00C6A8FC /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		57289FCC29E4821800B3CB2C /* UIImageView + .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + .swift"; sourceTree = "<group>"; };
+		57289FEB29E6CD9000B3CB2C /* LaunchDetailsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchDetailsInteractor.swift; sourceTree = "<group>"; };
+		57289FEC29E6CD9000B3CB2C /* LaunchDetailsConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchDetailsConfigurator.swift; sourceTree = "<group>"; };
+		57289FED29E6CD9000B3CB2C /* LaunchDetailsModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchDetailsModels.swift; sourceTree = "<group>"; };
+		57289FEE29E6CD9000B3CB2C /* LaunchDetailsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchDetailsRouter.swift; sourceTree = "<group>"; };
+		57289FEF29E6CD9000B3CB2C /* LaunchDetailsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchDetailsPresenter.swift; sourceTree = "<group>"; };
+		57289FF029E6CD9000B3CB2C /* LaunchDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchDetailsViewController.swift; sourceTree = "<group>"; };
+		5728A01629E7038200B3CB2C /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
+		5728A01A29E707B400B3CB2C /* RocketNamesAndDescriptionsQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RocketNamesAndDescriptionsQuery.graphql.swift; sourceTree = "<group>"; };
+		5728A01B29E707B400B3CB2C /* LaunchesQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchesQuery.graphql.swift; sourceTree = "<group>"; };
+		5728A01E29E707B400B3CB2C /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		5728A02029E707B400B3CB2C /* LaunchLinks.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchLinks.graphql.swift; sourceTree = "<group>"; };
+		5728A02129E707B400B3CB2C /* Launch.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Launch.graphql.swift; sourceTree = "<group>"; };
+		5728A02229E707B400B3CB2C /* Rocket.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rocket.graphql.swift; sourceTree = "<group>"; };
+		5728A02329E707B400B3CB2C /* Distance.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Distance.graphql.swift; sourceTree = "<group>"; };
+		5728A02429E707B400B3CB2C /* LaunchRocket.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchRocket.graphql.swift; sourceTree = "<group>"; };
+		5728A02529E707B400B3CB2C /* Query.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Query.graphql.swift; sourceTree = "<group>"; };
+		5728A02629E707B400B3CB2C /* Mass.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mass.graphql.swift; sourceTree = "<group>"; };
+		5728A02729E707B400B3CB2C /* SchemaConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaConfiguration.swift; sourceTree = "<group>"; };
+		5728A02829E707B400B3CB2C /* SchemaMetadata.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaMetadata.graphql.swift; sourceTree = "<group>"; };
 		57962D2A29DDF9F700747D54 /* SpaceX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57962D2D29DDF9F700747D54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57962D2F29DDF9F700747D54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +102,8 @@
 		57962D3629DDF9F900747D54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57962D3929DDF9F900747D54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57962D3B29DDF9F900747D54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57C8E8D429E70FE3005AF9DC /* LaunchImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchImageCell.swift; sourceTree = "<group>"; };
+		57C8E8D629E72E16005AF9DC /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		57F14CA229DF3BD900A32207 /* UIImage + .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + .swift"; sourceTree = "<group>"; };
 		57F14CA429DF421500A32207 /* UIColor + .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + .swift"; sourceTree = "<group>"; };
 		57F14CA629DF437400A32207 /* UIApplication + .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication + .swift"; sourceTree = "<group>"; };
@@ -108,11 +130,11 @@
 		5727172629E2C866004F80BA /* SpacexAPI */ = {
 			isa = PBXGroup;
 			children = (
-				5727175229E31E0C004F80BA /* Operations */,
-				5727174829E31E0C004F80BA /* Schema */,
-				5727175629E31E0D004F80BA /* SpacexAPI.graphql.swift */,
-				5727172329E2C862004F80BA /* SpacexAPI.graphqls */,
+				5728A01829E707B400B3CB2C /* Operations */,
+				5728A01C29E707B400B3CB2C /* Schema */,
 				5727172229E2C862004F80BA /* SpacexApiQueries.graphql */,
+				5727172329E2C862004F80BA /* SpacexAPI.graphqls */,
+				5727175629E31E0D004F80BA /* SpacexAPI.graphql.swift */,
 			);
 			path = SpacexAPI;
 			sourceTree = "<group>";
@@ -122,6 +144,7 @@
 			children = (
 				57962D2D29DDF9F700747D54 /* AppDelegate.swift */,
 				57962D2F29DDF9F700747D54 /* SceneDelegate.swift */,
+				57C8E8D629E72E16005AF9DC /* SplashViewController.swift */,
 				57962D3B29DDF9F900747D54 /* Info.plist */,
 			);
 			path = Application;
@@ -146,6 +169,7 @@
 			children = (
 				57F14CBE29E19FE700A32207 /* Home */,
 				5727173929E308E8004F80BA /* Launches */,
+				57289FEA29E6CD9000B3CB2C /* LaunchDetails */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -158,58 +182,10 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		5727174829E31E0C004F80BA /* Schema */ = {
-			isa = PBXGroup;
-			children = (
-				5727174929E31E0C004F80BA /* CustomScalars */,
-				5727174B29E31E0C004F80BA /* Objects */,
-				5727175029E31E0C004F80BA /* SchemaConfiguration.swift */,
-				5727175129E31E0C004F80BA /* SchemaMetadata.graphql.swift */,
-			);
-			path = Schema;
-			sourceTree = "<group>";
-		};
-		5727174929E31E0C004F80BA /* CustomScalars */ = {
-			isa = PBXGroup;
-			children = (
-				5727174A29E31E0C004F80BA /* Date.swift */,
-			);
-			path = CustomScalars;
-			sourceTree = "<group>";
-		};
-		5727174B29E31E0C004F80BA /* Objects */ = {
-			isa = PBXGroup;
-			children = (
-				5727174C29E31E0C004F80BA /* LaunchLinks.graphql.swift */,
-				5727174D29E31E0C004F80BA /* Launch.graphql.swift */,
-				5727174E29E31E0C004F80BA /* Rocket.graphql.swift */,
-				5727174F29E31E0C004F80BA /* Query.graphql.swift */,
-			);
-			path = Objects;
-			sourceTree = "<group>";
-		};
-		5727175229E31E0C004F80BA /* Operations */ = {
-			isa = PBXGroup;
-			children = (
-				5727175329E31E0C004F80BA /* Queries */,
-			);
-			path = Operations;
-			sourceTree = "<group>";
-		};
-		5727175329E31E0C004F80BA /* Queries */ = {
-			isa = PBXGroup;
-			children = (
-				5727175429E31E0C004F80BA /* RocketNamesAndDescriptionsQuery.graphql.swift */,
-				5727175529E31E0C004F80BA /* LaunchesQuery.graphql.swift */,
-			);
-			path = Queries;
-			sourceTree = "<group>";
-		};
 		5727176329E32FFB004F80BA /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				5727176429E32FFE004F80BA /* Networking */,
-				57526BE429E44CAD00C6A8FC /* ImageCache.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -221,6 +197,79 @@
 				5727176729E3305E004F80BA /* ImageRequest.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		57289FEA29E6CD9000B3CB2C /* LaunchDetails */ = {
+			isa = PBXGroup;
+			children = (
+				5728A03529E70FA300B3CB2C /* Views */,
+				57289FF029E6CD9000B3CB2C /* LaunchDetailsViewController.swift */,
+				57289FEB29E6CD9000B3CB2C /* LaunchDetailsInteractor.swift */,
+				57289FEF29E6CD9000B3CB2C /* LaunchDetailsPresenter.swift */,
+				57289FEE29E6CD9000B3CB2C /* LaunchDetailsRouter.swift */,
+				57289FED29E6CD9000B3CB2C /* LaunchDetailsModels.swift */,
+				57289FEC29E6CD9000B3CB2C /* LaunchDetailsConfigurator.swift */,
+			);
+			name = LaunchDetails;
+			path = SpaceX/Scenes/LaunchDetails;
+			sourceTree = SOURCE_ROOT;
+		};
+		5728A01829E707B400B3CB2C /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				5728A01929E707B400B3CB2C /* Queries */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		5728A01929E707B400B3CB2C /* Queries */ = {
+			isa = PBXGroup;
+			children = (
+				5728A01A29E707B400B3CB2C /* RocketNamesAndDescriptionsQuery.graphql.swift */,
+				5728A01B29E707B400B3CB2C /* LaunchesQuery.graphql.swift */,
+			);
+			path = Queries;
+			sourceTree = "<group>";
+		};
+		5728A01C29E707B400B3CB2C /* Schema */ = {
+			isa = PBXGroup;
+			children = (
+				5728A01D29E707B400B3CB2C /* CustomScalars */,
+				5728A01F29E707B400B3CB2C /* Objects */,
+				5728A02729E707B400B3CB2C /* SchemaConfiguration.swift */,
+				5728A02829E707B400B3CB2C /* SchemaMetadata.graphql.swift */,
+			);
+			path = Schema;
+			sourceTree = "<group>";
+		};
+		5728A01D29E707B400B3CB2C /* CustomScalars */ = {
+			isa = PBXGroup;
+			children = (
+				5728A01E29E707B400B3CB2C /* Date.swift */,
+			);
+			path = CustomScalars;
+			sourceTree = "<group>";
+		};
+		5728A01F29E707B400B3CB2C /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				5728A02029E707B400B3CB2C /* LaunchLinks.graphql.swift */,
+				5728A02129E707B400B3CB2C /* Launch.graphql.swift */,
+				5728A02229E707B400B3CB2C /* Rocket.graphql.swift */,
+				5728A02329E707B400B3CB2C /* Distance.graphql.swift */,
+				5728A02429E707B400B3CB2C /* LaunchRocket.graphql.swift */,
+				5728A02529E707B400B3CB2C /* Query.graphql.swift */,
+				5728A02629E707B400B3CB2C /* Mass.graphql.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		5728A03529E70FA300B3CB2C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				57C8E8D429E70FE3005AF9DC /* LaunchImageCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		57962D2129DDF9F700747D54 = {
@@ -262,7 +311,7 @@
 				57F14CA229DF3BD900A32207 /* UIImage + .swift */,
 				57F14CA429DF421500A32207 /* UIColor + .swift */,
 				57F14CA629DF437400A32207 /* UIApplication + .swift */,
-				57289FCC29E4821800B3CB2C /* UIImageView.swift */,
+				57289FCC29E4821800B3CB2C /* UIImageView + .swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -292,6 +341,7 @@
 		57F14CC229E1B5C500A32207 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5728A01629E7038200B3CB2C /* Launch.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -375,39 +425,50 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57526BE529E44CAD00C6A8FC /* ImageCache.swift in Sources */,
+				5728A02F29E707B400B3CB2C /* Distance.graphql.swift in Sources */,
 				5727174329E31A9D004F80BA /* LaunchesPresenter.swift in Sources */,
+				5728A03129E707B400B3CB2C /* Query.graphql.swift in Sources */,
 				57962D3229DDF9F700747D54 /* HomeViewController.swift in Sources */,
+				57C8E8D729E72E16005AF9DC /* SplashViewController.swift in Sources */,
 				57962D2E29DDF9F700747D54 /* AppDelegate.swift in Sources */,
+				5728A03429E707B400B3CB2C /* SchemaMetadata.graphql.swift in Sources */,
+				5728A03229E707B400B3CB2C /* Mass.graphql.swift in Sources */,
+				5728A02D29E707B400B3CB2C /* Launch.graphql.swift in Sources */,
 				57F14CA929E00EEB00A32207 /* HomeViewCell.swift in Sources */,
 				5727176629E33049004F80BA /* NetworkRequest.swift in Sources */,
-				5727175929E31E0D004F80BA /* Launch.graphql.swift in Sources */,
-				5727175C29E31E0D004F80BA /* SchemaConfiguration.swift in Sources */,
 				5727174129E31873004F80BA /* LaunchesModels.swift in Sources */,
 				5727176829E3305E004F80BA /* ImageRequest.swift in Sources */,
+				57289FF529E6CD9000B3CB2C /* LaunchDetailsPresenter.swift in Sources */,
+				57289FF429E6CD9000B3CB2C /* LaunchDetailsRouter.swift in Sources */,
 				57F14CBB29E19F6800A32207 /* HomePresenter.swift in Sources */,
 				5727174529E31AAC004F80BA /* LaunchesInteractor.swift in Sources */,
 				5727176029E31E0D004F80BA /* SpacexAPI.graphql.swift in Sources */,
-				5727175E29E31E0D004F80BA /* RocketNamesAndDescriptionsQuery.graphql.swift in Sources */,
+				57C8E8D529E70FE3005AF9DC /* LaunchImageCell.swift in Sources */,
+				5728A02E29E707B400B3CB2C /* Rocket.graphql.swift in Sources */,
+				5728A02C29E707B400B3CB2C /* LaunchLinks.graphql.swift in Sources */,
 				57F14CA529DF421500A32207 /* UIColor + .swift in Sources */,
 				57962D3029DDF9F700747D54 /* SceneDelegate.swift in Sources */,
 				57F14CB729E19F0100A32207 /* HomeConfigurator.swift in Sources */,
+				5728A02B29E707B400B3CB2C /* Date.swift in Sources */,
+				5728A02929E707B400B3CB2C /* RocketNamesAndDescriptionsQuery.graphql.swift in Sources */,
 				57F14CB929E19F5800A32207 /* HomeInteractor.swift in Sources */,
-				5727175F29E31E0D004F80BA /* LaunchesQuery.graphql.swift in Sources */,
-				5727175D29E31E0D004F80BA /* SchemaMetadata.graphql.swift in Sources */,
 				57F14CC129E1AD8600A32207 /* HomeModels.swift in Sources */,
 				57F14CA729DF437400A32207 /* UIApplication + .swift in Sources */,
-				5727175A29E31E0D004F80BA /* Rocket.graphql.swift in Sources */,
-				5727175829E31E0D004F80BA /* LaunchLinks.graphql.swift in Sources */,
+				57289FF129E6CD9000B3CB2C /* LaunchDetailsInteractor.swift in Sources */,
+				57289FF329E6CD9000B3CB2C /* LaunchDetailsModels.swift in Sources */,
+				5728A02A29E707B400B3CB2C /* LaunchesQuery.graphql.swift in Sources */,
+				5728A01729E7038200B3CB2C /* Launch.swift in Sources */,
+				5728A03029E707B400B3CB2C /* LaunchRocket.graphql.swift in Sources */,
+				57289FF629E6CD9000B3CB2C /* LaunchDetailsViewController.swift in Sources */,
 				57F14CA329DF3BD900A32207 /* UIImage + .swift in Sources */,
-				5727175B29E31E0D004F80BA /* Query.graphql.swift in Sources */,
 				5727174729E31BC2004F80BA /* LaunchesRouter.swift in Sources */,
 				57F14CBD29E19FC400A32207 /* HomeRouter.swift in Sources */,
 				5727176A29E334CC004F80BA /* LaunchesConfigurator.swift in Sources */,
-				5727175729E31E0D004F80BA /* Date.swift in Sources */,
+				57289FF229E6CD9000B3CB2C /* LaunchDetailsConfigurator.swift in Sources */,
 				5727176229E32F1B004F80BA /* Date + .swift in Sources */,
 				5727173F29E30950004F80BA /* LaunchViewCell.swift in Sources */,
-				57289FCD29E4821800B3CB2C /* UIImageView.swift in Sources */,
+				57289FCD29E4821800B3CB2C /* UIImageView + .swift in Sources */,
+				5728A03329E707B400B3CB2C /* SchemaConfiguration.swift in Sources */,
 				5727173C29E3090B004F80BA /* LaunchesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

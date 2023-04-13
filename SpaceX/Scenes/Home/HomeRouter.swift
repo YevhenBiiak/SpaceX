@@ -8,14 +8,10 @@
 import UIKit
 
 protocol HomeDataStore {
-    //var items: [Item] { get }
+    //var items: [Model] { get }
 }
 
-protocol HomeDataPassing {
-    var dataStore: HomeDataStore? { get }
-}
-
-class HomeRouter: NSObject, HomeRoutingLogic, HomeDataPassing {
+class HomeRouter: NSObject, HomeRoutingLogic {
     
     weak var viewController: HomeViewController?
     var dataStore: HomeDataStore?

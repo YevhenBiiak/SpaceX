@@ -35,6 +35,9 @@ public extension SpacexAPI {
       case "Rocket": return SpacexAPI.Objects.Rocket
       case "Launch": return SpacexAPI.Objects.Launch
       case "LaunchLinks": return SpacexAPI.Objects.LaunchLinks
+      case "LaunchRocket": return SpacexAPI.Objects.LaunchRocket
+      case "Distance": return SpacexAPI.Objects.Distance
+      case "Mass": return SpacexAPI.Objects.Mass
       default: return nil
       }
     }
