@@ -9,6 +9,10 @@ import UIKit
 
 class SplashViewController: UIViewController {
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -16,4 +20,5 @@ class SplashViewController: UIViewController {
             self?.performSegue(withIdentifier: "Home", sender: nil)
         }
     }
+    
 }

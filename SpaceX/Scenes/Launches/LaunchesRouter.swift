@@ -22,8 +22,7 @@ class LaunchesRouter: NSObject, LaunchesRoutingLogic {
             var destinationDS = destinationVC.interactor as! LaunchDetailsDataStore
             passDataLaunchDetails(source: dataStore!, destination: &destinationDS)
         } else {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let destinationVC = storyboard.instantiateViewController(withIdentifier: "LaunchDetailsViewController") as! LaunchDetailsViewController
+            let destinationVC = UIStoryboard.main.instance(of: LaunchDetailsViewController.self)
             var destinationDS = destinationVC.interactor as! LaunchDetailsDataStore
             passDataLaunchDetails(source: dataStore!, destination: &destinationDS)
             navigateToLaunchDetails(source: viewController!, destination: destinationVC)

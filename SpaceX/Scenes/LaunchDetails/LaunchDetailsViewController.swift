@@ -8,7 +8,7 @@
 import UIKit
 
 @objc protocol LaunchDetailsRoutingLogic: NSObjectProtocol {
-    func routeToSomewhere(segue: UIStoryboardSegue?)
+    func routeToRocket(segue: UIStoryboardSegue?)
 }
 
 protocol LaunchDetailsBusinessLogic {
@@ -50,6 +50,7 @@ class LaunchDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.backButtonTitle = ""
         configureCollectinView()
         makeRequest()
     }
