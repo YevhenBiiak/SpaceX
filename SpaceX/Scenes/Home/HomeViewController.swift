@@ -19,6 +19,7 @@ protocol HomeBusinessLogic {
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    private var logoImageView: UIImageView!
     
     var interactor: HomeBusinessLogic?
     var router: HomeRoutingLogic?
@@ -32,8 +33,17 @@ class HomeViewController: UIViewController {
         
         HomeConfigurator.configure(with: self)
         
-        let request = Home.FetchItems.Request()
-        interactor?.fetchItems(request: request)
+        fetchItems()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        logoImageView.isHidden = false
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        logoImageView.isHidden = true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -43,6 +53,11 @@ class HomeViewController: UIViewController {
                 router.perform(selector, with: segue)
             }
         }
+    }
+    
+    private func fetchItems() {
+        let request = Home.FetchItems.Request()
+        interactor?.fetchItems(request: request)
     }
     
     private func setBackgroundImage() {
@@ -57,17 +72,17 @@ class HomeViewController: UIViewController {
         navigationItem.backButtonTitle = ""
         
         let logo = UIImage(named: "spacex_logo")!
-        let imageView = UIImageView(image: logo)
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        navigationBar.addSubview(imageView)
+        logoImageView = UIImageView(image: logo)
+        logoImageView.translatesAutoresizingMaskIntoConstraints = false
+        navigationBar.addSubview(logoImageView)
         
         NSLayoutConstraint.activate([
-            imageView.widthAnchor.constraint(greaterThanOrEqualTo: navigationBar.widthAnchor, multiplier: 0.5),
-            imageView.widthAnchor.constraint(lessThanOrEqualTo: navigationBar.heightAnchor, multiplier: 5),
-            imageView.widthAnchor.constraint(lessThanOrEqualTo: navigationBar.widthAnchor, multiplier: 0.8),
-            imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor, multiplier: logo.aspectRation),
-            imageView.centerXAnchor.constraint(equalTo: navigationBar.centerXAnchor, constant: navigationBar.frame.width * 0.055),
-            imageView.centerYAnchor.constraint(equalTo: navigationBar.centerYAnchor, constant: -8)
+            logoImageView.widthAnchor.constraint(greaterThanOrEqualTo: navigationBar.widthAnchor, multiplier: 0.5),
+            logoImageView.widthAnchor.constraint(lessThanOrEqualTo: navigationBar.heightAnchor, multiplier: 5),
+            logoImageView.widthAnchor.constraint(lessThanOrEqualTo: navigationBar.widthAnchor, multiplier: 0.8),
+            logoImageView.widthAnchor.constraint(equalTo: logoImageView.heightAnchor, multiplier: logo.aspectRation),
+            logoImageView.centerXAnchor.constraint(equalTo: navigationBar.centerXAnchor, constant: navigationBar.frame.width * 0.055),
+            logoImageView.centerYAnchor.constraint(equalTo: navigationBar.centerYAnchor, constant: -8)
         ])
     }
 }

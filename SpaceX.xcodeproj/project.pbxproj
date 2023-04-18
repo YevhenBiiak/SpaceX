@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5713D91629EEA1C800A7A8B5 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5713D91529EEA1C800A7A8B5 /* ActivityIndicatorView.swift */; };
+		5713D91829EEC77C00A7A8B5 /* SpaceX.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5713D91729EEC77C00A7A8B5 /* SpaceX.ttf */; };
+		5713D91B29EEDF0F00A7A8B5 /* Rocket3DViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5713D91A29EEDF0F00A7A8B5 /* Rocket3DViewController.swift */; };
+		5713D91D29EEE28000A7A8B5 /* Rocket3DInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5713D91C29EEE28000A7A8B5 /* Rocket3DInteractor.swift */; };
+		5713D91F29EEE28700A7A8B5 /* Rocket3DPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5713D91E29EEE28600A7A8B5 /* Rocket3DPresenter.swift */; };
+		5713D92129EEE28F00A7A8B5 /* Rocket3DRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5713D92029EEE28F00A7A8B5 /* Rocket3DRouter.swift */; };
+		5713D92329EEE29400A7A8B5 /* Rocket3DModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5713D92229EEE29400A7A8B5 /* Rocket3DModels.swift */; };
+		5713D92529EEE29F00A7A8B5 /* Rocket3DConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5713D92429EEE29F00A7A8B5 /* Rocket3DConfigurator.swift */; };
 		5727172429E2C862004F80BA /* SpacexApiQueries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 5727172229E2C862004F80BA /* SpacexApiQueries.graphql */; };
 		5727172529E2C862004F80BA /* SpacexAPI.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = 5727172329E2C862004F80BA /* SpacexAPI.graphqls */; };
 		5727173C29E3090B004F80BA /* LaunchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727173B29E3090B004F80BA /* LaunchesViewController.swift */; };
@@ -77,6 +85,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5713D91529EEA1C800A7A8B5 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
+		5713D91729EEC77C00A7A8B5 /* SpaceX.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SpaceX.ttf; sourceTree = "<group>"; };
+		5713D91A29EEDF0F00A7A8B5 /* Rocket3DViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket3DViewController.swift; sourceTree = "<group>"; };
+		5713D91C29EEE28000A7A8B5 /* Rocket3DInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket3DInteractor.swift; sourceTree = "<group>"; };
+		5713D91E29EEE28600A7A8B5 /* Rocket3DPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket3DPresenter.swift; sourceTree = "<group>"; };
+		5713D92029EEE28F00A7A8B5 /* Rocket3DRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket3DRouter.swift; sourceTree = "<group>"; };
+		5713D92229EEE29400A7A8B5 /* Rocket3DModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket3DModels.swift; sourceTree = "<group>"; };
+		5713D92429EEE29F00A7A8B5 /* Rocket3DConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket3DConfigurator.swift; sourceTree = "<group>"; };
 		5727172229E2C862004F80BA /* SpacexApiQueries.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpacexApiQueries.graphql; sourceTree = "<group>"; };
 		5727172329E2C862004F80BA /* SpacexAPI.graphqls */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpacexAPI.graphqls; sourceTree = "<group>"; };
 		5727173B29E3090B004F80BA /* LaunchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesViewController.swift; sourceTree = "<group>"; };
@@ -159,12 +175,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5713D91429EEA1BC00A7A8B5 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				5713D91529EEA1C800A7A8B5 /* ActivityIndicatorView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		5713D91929EEDEEB00A7A8B5 /* Rocket3D */ = {
+			isa = PBXGroup;
+			children = (
+				5713D91A29EEDF0F00A7A8B5 /* Rocket3DViewController.swift */,
+				5713D91C29EEE28000A7A8B5 /* Rocket3DInteractor.swift */,
+				5713D91E29EEE28600A7A8B5 /* Rocket3DPresenter.swift */,
+				5713D92029EEE28F00A7A8B5 /* Rocket3DRouter.swift */,
+				5713D92229EEE29400A7A8B5 /* Rocket3DModels.swift */,
+				5713D92429EEE29F00A7A8B5 /* Rocket3DConfigurator.swift */,
+			);
+			path = Rocket3D;
+			sourceTree = "<group>";
+		};
 		5727172629E2C866004F80BA /* SpacexAPI */ = {
 			isa = PBXGroup;
 			children = (
-				5727172229E2C862004F80BA /* SpacexApiQueries.graphql */,
 				5740289229E9CC84004632BD /* Operations */,
 				5740287D29E9CC84004632BD /* Schema */,
+				5727172229E2C862004F80BA /* SpacexApiQueries.graphql */,
 				5727172329E2C862004F80BA /* SpacexAPI.graphqls */,
 				5727175629E31E0D004F80BA /* SpacexAPI.graphql.swift */,
 			);
@@ -203,6 +240,7 @@
 				5727173929E308E8004F80BA /* Launches */,
 				57289FEA29E6CD9000B3CB2C /* LaunchDetails */,
 				57A6CDE829E850AA004E2BB5 /* Rocket */,
+				5713D91929EEDEEB00A7A8B5 /* Rocket3D */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -337,7 +375,9 @@
 				5727172629E2C866004F80BA /* SpacexAPI */,
 				57F14CC229E1B5C500A32207 /* Models */,
 				5727173A29E308F8004F80BA /* Scenes */,
+				5713D91429EEA1BC00A7A8B5 /* CustomViews */,
 				57F14CA129DF3BCE00A32207 /* Extensions */,
+				5713D91729EEC77C00A7A8B5 /* SpaceX.ttf */,
 				57962D3329DDF9F700747D54 /* Main.storyboard */,
 				57962D3829DDF9F900747D54 /* LaunchScreen.storyboard */,
 				57962D3629DDF9F900747D54 /* Assets.xcassets */,
@@ -470,6 +510,7 @@
 				5727172429E2C862004F80BA /* SpacexApiQueries.graphql in Resources */,
 				57962D3729DDF9F900747D54 /* Assets.xcassets in Resources */,
 				57962D3529DDF9F700747D54 /* Main.storyboard in Resources */,
+				5713D91829EEC77C00A7A8B5 /* SpaceX.ttf in Resources */,
 				5727172529E2C862004F80BA /* SpacexAPI.graphqls in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -493,10 +534,12 @@
 				5740289D29E9CC84004632BD /* Distance.graphql.swift in Sources */,
 				57A6CDF029E85126004E2BB5 /* RocketRouter.swift in Sources */,
 				57F14CA929E00EEB00A32207 /* HomeViewCell.swift in Sources */,
+				5713D91F29EEE28700A7A8B5 /* Rocket3DPresenter.swift in Sources */,
 				5727176629E33049004F80BA /* NetworkRequest.swift in Sources */,
 				5727174129E31873004F80BA /* LaunchesModels.swift in Sources */,
 				5727176829E3305E004F80BA /* ImageRequest.swift in Sources */,
 				57289FF529E6CD9000B3CB2C /* LaunchDetailsPresenter.swift in Sources */,
+				5713D91B29EEDF0F00A7A8B5 /* Rocket3DViewController.swift in Sources */,
 				57289FF429E6CD9000B3CB2C /* LaunchDetailsRouter.swift in Sources */,
 				5740289C29E9CC84004632BD /* Rocket.graphql.swift in Sources */,
 				5740289729E9CC84004632BD /* Date.swift in Sources */,
@@ -506,6 +549,7 @@
 				574028A529E9CC84004632BD /* RocketLandingLegs.graphql.swift in Sources */,
 				5727174529E31AAC004F80BA /* LaunchesInteractor.swift in Sources */,
 				574028A129E9CC84004632BD /* RocketSecondStage.graphql.swift in Sources */,
+				5713D92129EEE28F00A7A8B5 /* Rocket3DRouter.swift in Sources */,
 				574028AA29E9CC84004632BD /* RocketNamesAndDescriptionsQuery.graphql.swift in Sources */,
 				5727176029E31E0D004F80BA /* SpacexAPI.graphql.swift in Sources */,
 				57C8E8D529E70FE3005AF9DC /* LaunchImageCell.swift in Sources */,
@@ -525,9 +569,11 @@
 				574028AB29E9CC84004632BD /* LaunchesQuery.graphql.swift in Sources */,
 				574028A329E9CC84004632BD /* RocketSecondStagePayloadCompositeFairing.graphql.swift in Sources */,
 				57A6CDEE29E8511F004E2BB5 /* RocketPresenter.swift in Sources */,
+				5713D91D29EEE28000A7A8B5 /* Rocket3DInteractor.swift in Sources */,
 				57289FF329E6CD9000B3CB2C /* LaunchDetailsModels.swift in Sources */,
 				5728A01729E7038200B3CB2C /* Launch.swift in Sources */,
 				5740289A29E9CC84004632BD /* Launch.graphql.swift in Sources */,
+				5713D91629EEA1C800A7A8B5 /* ActivityIndicatorView.swift in Sources */,
 				57289FF629E6CD9000B3CB2C /* LaunchDetailsViewController.swift in Sources */,
 				57F14CA329DF3BD900A32207 /* UIImage + .swift in Sources */,
 				57A6CDF729E858C3004E2BB5 /* UIStoryboard + .swift in Sources */,
@@ -535,6 +581,7 @@
 				57F14CBD29E19FC400A32207 /* HomeRouter.swift in Sources */,
 				5727176A29E334CC004F80BA /* LaunchesConfigurator.swift in Sources */,
 				5740289E29E9CC84004632BD /* RocketPayloadWeight.graphql.swift in Sources */,
+				5713D92529EEE29F00A7A8B5 /* Rocket3DConfigurator.swift in Sources */,
 				57289FF229E6CD9000B3CB2C /* LaunchDetailsConfigurator.swift in Sources */,
 				5740289829E9CC84004632BD /* LaunchLinks.graphql.swift in Sources */,
 				5727176229E32F1B004F80BA /* Date + .swift in Sources */,
@@ -542,6 +589,7 @@
 				5727173F29E30950004F80BA /* LaunchViewCell.swift in Sources */,
 				57289FCD29E4821800B3CB2C /* UIImageView + .swift in Sources */,
 				5727173C29E3090B004F80BA /* LaunchesViewController.swift in Sources */,
+				5713D92329EEE29400A7A8B5 /* Rocket3DModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

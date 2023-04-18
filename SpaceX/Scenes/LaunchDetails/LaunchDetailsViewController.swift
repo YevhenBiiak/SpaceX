@@ -52,7 +52,7 @@ class LaunchDetailsViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.backButtonTitle = ""
         configureCollectinView()
-        makeRequest()
+        showLaunch()
     }
     
     // MARK: Routing
@@ -66,7 +66,7 @@ class LaunchDetailsViewController: UIViewController {
         }
     }
     
-    private func makeRequest() {
+    private func showLaunch() {
         let request = LaunchDetails.ShowLaunch.Request()
         interactor?.showLaunch(request: request)
     }

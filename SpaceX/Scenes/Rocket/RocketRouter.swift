@@ -8,7 +8,7 @@
 import UIKit
 
 protocol RocketDataStore {
-    var name: String { get set }
+    var rocketID: String! { get set }
 }
 
 class RocketRouter: NSObject, RocketRoutingLogic {
@@ -18,29 +18,29 @@ class RocketRouter: NSObject, RocketRoutingLogic {
     
     // MARK: Routing
     
-    func routeToSomewhere(segue: UIStoryboardSegue?) {
+    func routeToRocket3D(segue: UIStoryboardSegue?) {
         if let segue = segue {
-            let destinationVC = segue.destination as! RocketViewController
-            var destinationDS = destinationVC.interactor as! RocketDataStore
-            passDataToSomewhere(source: dataStore!, destination: &destinationDS)
+            let destinationVC = segue.destination as! Rocket3DViewController
+            var destinationDS = destinationVC.interactor as! Rocket3DDataStore
+            passDataToRocket3D(source: dataStore!, destination: &destinationDS)
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let destinationVC = storyboard.instantiateViewController(withIdentifier: "RocketViewController") as! RocketViewController
-            var destinationDS = destinationVC.interactor as! RocketDataStore
-            passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-            navigateToSomewhere(source: viewController!, destination: destinationVC)
+            let destinationVC = storyboard.instantiateViewController(withIdentifier: "Rocket3DViewController") as! Rocket3DViewController
+            var destinationDS = destinationVC.interactor as! Rocket3DDataStore
+            passDataToRocket3D(source: dataStore!, destination: &destinationDS)
+            navigateToRocket3D(source: viewController!, destination: destinationVC)
         }
     }
     
     // MARK: Navigation
     
-    func navigateToSomewhere(source: RocketViewController, destination: RocketViewController) {
+    func navigateToRocket3D(source: RocketViewController, destination: Rocket3DViewController) {
         source.show(destination, sender: nil)
     }
     
     // MARK: Passing data
     
-    func passDataToSomewhere(source: RocketDataStore, destination: inout RocketDataStore) {
-        destination.name = source.name
+    func passDataToRocket3D(source: RocketDataStore, destination: inout Rocket3DDataStore) {
+        destination.rocketID = source.rocketID
     }
 }

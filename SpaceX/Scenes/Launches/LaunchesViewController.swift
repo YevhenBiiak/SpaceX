@@ -18,6 +18,7 @@ protocol LaunchesBusinessLogic {
 class LaunchesViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    private let activityIndicator = ActivityIndicatorView()
     
     var interactor: LaunchesBusinessLogic?
     var router: LaunchesRoutingLogic?
@@ -28,11 +29,11 @@ class LaunchesViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.backButtonTitle = ""
         configureCollectinView()
+        addActivityIndicator()
         
         LaunchesConfigurator.configure(with: self)
         
-        let request = Launches.FetchLaunches.Request()
-        interactor?.fetchLaunches(request: request)
+        fetchLaunches()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -42,6 +43,12 @@ class LaunchesViewController: UIViewController {
                 router.perform(selector, with: segue)
             }
         }
+    }
+    
+    private func fetchLaunches() {
+        let request = Launches.FetchLaunches.Request()
+        interactor?.fetchLaunches(request: request)
+        activityIndicator.startAnimating()
     }
     
     private func configureCollectinView() {
@@ -63,6 +70,12 @@ class LaunchesViewController: UIViewController {
             section: .init(group: group))
     }
     
+    private func addActivityIndicator() {
+        view.addSubview(activityIndicator)
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+    }
 }
 
 extension LaunchesViewController: LaunchesDisplayLogic {
@@ -70,6 +83,7 @@ extension LaunchesViewController: LaunchesDisplayLogic {
     func display(viewModels: [Launches.FetchLaunches.ViewModel]) {
         self.viewModels = viewModels
         collectionView.reloadData()
+        activityIndicator.stopAnimating()
     }
 }
 

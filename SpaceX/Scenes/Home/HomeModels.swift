@@ -9,11 +9,10 @@ import UIKit
 
 enum Home {
     
-    struct Model {
-        var id = String()
+    struct Rocket {
+        let id: String
         let name: String
         let description: String
-        var image: UIImage?
     }
     
     // MARK: Use cases
@@ -21,7 +20,7 @@ enum Home {
     enum FetchItems {
         struct Request {}
         struct Response {
-            var items: [Model]
+            var items: [Rocket]
         }
         struct ViewModel {
             let id: String
