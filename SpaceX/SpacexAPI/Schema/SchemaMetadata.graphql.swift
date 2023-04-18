@@ -38,6 +38,14 @@ public extension SpacexAPI {
       case "LaunchRocket": return SpacexAPI.Objects.LaunchRocket
       case "Distance": return SpacexAPI.Objects.Distance
       case "Mass": return SpacexAPI.Objects.Mass
+      case "RocketPayloadWeight": return SpacexAPI.Objects.RocketPayloadWeight
+      case "RocketEngines": return SpacexAPI.Objects.RocketEngines
+      case "RocketLandingLegs": return SpacexAPI.Objects.RocketLandingLegs
+      case "RocketFirstStage": return SpacexAPI.Objects.RocketFirstStage
+      case "Force": return SpacexAPI.Objects.Force
+      case "RocketSecondStage": return SpacexAPI.Objects.RocketSecondStage
+      case "RocketSecondStagePayloads": return SpacexAPI.Objects.RocketSecondStagePayloads
+      case "RocketSecondStagePayloadCompositeFairing": return SpacexAPI.Objects.RocketSecondStagePayloadCompositeFairing
       default: return nil
       }
     }

@@ -53,4 +53,13 @@ class HomeViewCell: UITableViewCell {
             self.layoutIfNeeded()
         }
     }
+    
+    override func prepareForReuse() {
+        isSelected = false
+        contentTopConstraint.constant = 184
+        
+        UIView.animate(withDuration: 0.0) {
+            self.layoutIfNeeded()
+        }
+    }
 }

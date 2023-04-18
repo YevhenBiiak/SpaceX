@@ -6,8 +6,9 @@ import Apollo
 
 public enum SpacexAPI { }
 
-typealias APIRocket = SpacexAPI.RocketNamesAndDescriptionsQuery.Data.Rocket
-typealias APILaunch = SpacexAPI.LaunchesQuery.Data.Launch
+typealias APIRocket = SpacexAPI.RocketQuery.Data.Rocket
+typealias APIRockets = [SpacexAPI.RocketNamesAndDescriptionsQuery.Data.Rocket]
+typealias APILaunches = [SpacexAPI.LaunchesQuery.Data.Launch]
 
 // MARK: - Implementation of SpacexAPI
 
@@ -15,7 +16,19 @@ extension SpacexAPI {
     
     private static let apollo = ApolloClient(url: URL(string: "https://spacex-production.up.railway.app")!)
     
-    static func fetchRockets(_ completion: @escaping (Result<[APIRocket], Error>) -> Void) {
+    static func fetchRocket(id: String, _ completion: @escaping (Result<APIRocket?, Error>) -> Void) {
+        apollo.fetch(query: RocketQuery(id: id)) { result in
+            switch result {
+            case .success(let graphqlResult):
+                let rocket = graphqlResult.data?.rocket
+                completion(.success(rocket))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    static func fetchRockets(_ completion: @escaping (Result<APIRockets, Error>) -> Void) {
         apollo.fetch(query: RocketNamesAndDescriptionsQuery()) { result in
             switch result {
             case .success(let graphqlResult):
@@ -27,7 +40,7 @@ extension SpacexAPI {
         }
     }
     
-    static func fetchLaunches(_ completion: @escaping (Result<[APILaunch], Error>) -> Void) {
+    static func fetchLaunches(_ completion: @escaping (Result<APILaunches, Error>) -> Void) {
         apollo.fetch(query: LaunchesQuery()) { result in
             switch result {
             case .success(let graphqlResult):

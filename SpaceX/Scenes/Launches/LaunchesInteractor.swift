@@ -66,7 +66,7 @@ class LaunchesInteractor: LaunchesBusinessLogic, LaunchesDataStore {
                 self?.presenter?.presentLaunches(response: response)
                 
             case .failure(let error):
-                print(error)
+                print(error.localizedDescription)
             }
         }
     }

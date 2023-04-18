@@ -18,29 +18,28 @@ class LaunchDetailsRouter: NSObject, LaunchDetailsRoutingLogic {
     
     // MARK: Routing
     
-    func routeToSomewhere(segue: UIStoryboardSegue?) {
+    func routeToRocket(segue: UIStoryboardSegue?) {
         if let segue = segue {
-            let destinationVC = segue.destination as! LaunchDetailsViewController
-            var destinationDS = destinationVC.interactor as! LaunchDetailsDataStore
-            passDataToSomewhere(source: dataStore!, destination: &destinationDS)
+            let destinationVC = segue.destination as! RocketViewController
+            var destinationDS = destinationVC.interactor as! RocketDataStore
+            passDataToRocket(source: dataStore!, destination: &destinationDS)
         } else {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let destinationVC = storyboard.instantiateViewController(withIdentifier: "LaunchDetailsViewController") as! LaunchDetailsViewController
-            var destinationDS = destinationVC.interactor as! LaunchDetailsDataStore
-            passDataToSomewhere(source: dataStore!, destination: &destinationDS)
+            let destinationVC = UIStoryboard.main.instance(of: RocketViewController.self)
+            var destinationDS = destinationVC.interactor as! RocketDataStore
+            passDataToRocket(source: dataStore!, destination: &destinationDS)
             navigateToSomewhere(source: viewController!, destination: destinationVC)
         }
     }
     
     // MARK: Navigation
     
-    func navigateToSomewhere(source: LaunchDetailsViewController, destination: LaunchDetailsViewController) {
+    func navigateToSomewhere(source: LaunchDetailsViewController, destination: RocketViewController) {
         source.show(destination, sender: nil)
     }
     
     // MARK: Passing data
     
-    func passDataToSomewhere(source: LaunchDetailsDataStore, destination: inout LaunchDetailsDataStore) {
+    func passDataToRocket(source: LaunchDetailsDataStore, destination: inout RocketDataStore) {
 //        destination.name = source.name
     }
 }
