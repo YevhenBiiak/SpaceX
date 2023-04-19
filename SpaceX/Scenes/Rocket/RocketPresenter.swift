@@ -18,6 +18,7 @@ class RocketPresenter: RocketPresentationLogic {
     func presentRocket(response: Rocket.FetchRocket.Response) {
         let rocket = response.rocket
         let images = getRocketImages(id: rocket.id)
+        let payloads = parsePayloads(from: rocket.payloadWeights)
         
         let viewModel = Rocket.FetchRocket.ViewModel(
             id: rocket.id,
@@ -31,9 +32,9 @@ class RocketPresenter: RocketPresentationLogic {
             height: "\(rocket.height.meters) m / \(rocket.height.feet) ft",
             diameter: "\(rocket.diameter.meters) m / \(rocket.diameter.feet) ft",
             mass: "\(rocket.mass.kg) kg / \(rocket.mass.lb) lb",
-            payloadToLEO: "\(rocket.payloadWeights.first?.mass.kg ?? 0) kg / \(rocket.payloadWeights.first?.mass.lb ?? 0) lb",
-            payloadToGTO: "-",
-            payloadToMars: "-",
+            payloadToLEO: payloads.payloadToLEO,
+            payloadToGTO: payloads.payloadToGTO,
+            payloadToMars: payloads.payloadToMars,
             firstStage: .init(
                 image: images.firstStageImage,
                 name: getFirstStageName(id: rocket.id),
@@ -54,6 +55,20 @@ class RocketPresenter: RocketPresentationLogic {
                 thrust: "\(rocket.secondStage.thrust.kN) kN / \(rocket.secondStage.thrust.lbf) lbf")
         )
         view?.display(viewModel: viewModel)
+    }
+    
+    // MARK: - Private methods
+    
+    private func parsePayloads(from payloads: [Rocket.Model.Payload]) -> Payload {
+        var payloadToLEO = "-"
+        var payloadToGTO = "-"
+        var payloadToMars = "-"
+        
+        if payloads.count > 0 { payloadToLEO  = "\(payloads[0].mass.kg) kg / \(payloads[0].mass.lb) lb" }
+        if payloads.count > 1 { payloadToGTO  = "\(payloads[1].mass.kg) kg / \(payloads[1].mass.lb) lb" }
+        if payloads.count > 2 { payloadToMars = "\(payloads[2].mass.kg) kg / \(payloads[2].mass.lb) lb" }
+        
+        return .init(payloadToLEO: payloadToLEO, payloadToGTO: payloadToGTO, payloadToMars: payloadToMars)
     }
     
     private func getRocketImages(id: String) -> RocketImages {
@@ -120,6 +135,12 @@ class RocketPresenter: RocketPresentationLogic {
             ? "SPACESHIP"
             : "PAYLOAD"
     }
+}
+
+private struct Payload {
+    let payloadToLEO: String
+    let payloadToGTO: String
+    let payloadToMars: String
 }
 
 private struct RocketImages {
