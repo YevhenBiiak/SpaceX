@@ -6,14 +6,18 @@
 //
 
 import UIKit
+import SceneKit
 
 @objc protocol Rocket3DRoutingLogic: NSObjectProtocol {}
 
 protocol Rocket3DBusinessLogic {
-    func doSomething(request: Rocket3D.UseCases.Request)
+    func show3DModel(request: Rocket3D.Show3DModel.Request)
 }
 
 class Rocket3DViewController: UIViewController {
+    
+    @IBOutlet weak var sceneView: SCNView!
+    private let activityIndicator = ActivityIndicatorView()
     
     var interactor: Rocket3DBusinessLogic?
     var router: Rocket3DRoutingLogic?
@@ -30,10 +34,19 @@ class Rocket3DViewController: UIViewController {
     
     // MARK: View lifecycle
     
+    override var prefersStatusBarHidden: Bool {
+        true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        Rocket3DConfigurator.configure(with: self)
-        makeRequest()
+        addActivityIndicator()
+        activityIndicator.startAnimating()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        show3DModel()
     }
     
     // MARK: Routing
@@ -47,16 +60,38 @@ class Rocket3DViewController: UIViewController {
         }
     }
     
-    private func makeRequest() {
-        let request = Rocket3D.UseCases.Request()
-        interactor?.doSomething(request: request)
+    private func show3DModel() {
+        let request = Rocket3D.Show3DModel.Request()
+        interactor?.show3DModel(request: request)
+    }
+    
+    private func addActivityIndicator() {
+        view.addSubview(activityIndicator)
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
 }
 
 extension Rocket3DViewController: Rocket3DDisplayLogic {
     
-    func display(viewModel: Rocket3D.UseCases.ViewModel) {
+    func display(viewModel: Rocket3D.Show3DModel.ViewModel) {
+        let scene = SCNScene(named: viewModel.filename)
         
+        // Add light to scene
+        let lightNode = SCNNode()
+        lightNode.light = SCNLight()
+        lightNode.light?.type = .omni
+        lightNode.position = SCNVector3(x: 0, y: 10, z: 35)
+        scene?.rootNode.addChildNode(lightNode)
+        
+        // Allow user to manipulate camera
+        self.sceneView.allowsCameraControl = true
+        
+        // Set scene settings
+        self.sceneView.scene = scene
+        
+        activityIndicator.stopAnimating()
     }
 }
 

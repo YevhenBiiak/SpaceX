@@ -15,6 +15,12 @@
 		5713D92129EEE28F00A7A8B5 /* Rocket3DRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5713D92029EEE28F00A7A8B5 /* Rocket3DRouter.swift */; };
 		5713D92329EEE29400A7A8B5 /* Rocket3DModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5713D92229EEE29400A7A8B5 /* Rocket3DModels.swift */; };
 		5713D92529EEE29F00A7A8B5 /* Rocket3DConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5713D92429EEE29F00A7A8B5 /* Rocket3DConfigurator.swift */; };
+		5713D93029EF016A00A7A8B5 /* falcon_heavy.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5713D92929EF016A00A7A8B5 /* falcon_heavy.jpeg */; };
+		5713D93129EF016A00A7A8B5 /* falcon_heavy.scn in Resources */ = {isa = PBXBuildFile; fileRef = 5713D92A29EF016A00A7A8B5 /* falcon_heavy.scn */; };
+		5713D93229EF016A00A7A8B5 /* falcon_9.scn in Resources */ = {isa = PBXBuildFile; fileRef = 5713D92C29EF016A00A7A8B5 /* falcon_9.scn */; };
+		5713D93329EF016A00A7A8B5 /* falcon_9_fairing.png in Resources */ = {isa = PBXBuildFile; fileRef = 5713D92D29EF016A00A7A8B5 /* falcon_9_fairing.png */; };
+		5713D93429EF016A00A7A8B5 /* falcon_9_stage.png in Resources */ = {isa = PBXBuildFile; fileRef = 5713D92E29EF016A00A7A8B5 /* falcon_9_stage.png */; };
+		5713D93829EF168800A7A8B5 /* falcon_1.scn in Resources */ = {isa = PBXBuildFile; fileRef = 5713D93729EF168700A7A8B5 /* falcon_1.scn */; };
 		5727172429E2C862004F80BA /* SpacexApiQueries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 5727172229E2C862004F80BA /* SpacexApiQueries.graphql */; };
 		5727172529E2C862004F80BA /* SpacexAPI.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = 5727172329E2C862004F80BA /* SpacexAPI.graphqls */; };
 		5727173C29E3090B004F80BA /* LaunchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5727173B29E3090B004F80BA /* LaunchesViewController.swift */; };
@@ -57,6 +63,7 @@
 		574028A929E9CC84004632BD /* RocketQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5740289429E9CC84004632BD /* RocketQuery.graphql.swift */; };
 		574028AA29E9CC84004632BD /* RocketNamesAndDescriptionsQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5740289529E9CC84004632BD /* RocketNamesAndDescriptionsQuery.graphql.swift */; };
 		574028AB29E9CC84004632BD /* LaunchesQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5740289629E9CC84004632BD /* LaunchesQuery.graphql.swift */; };
+		575042E129EFE33A00D6CB75 /* starship.scn in Resources */ = {isa = PBXBuildFile; fileRef = 575042E029EFE33A00D6CB75 /* starship.scn */; };
 		57962D2E29DDF9F700747D54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57962D2D29DDF9F700747D54 /* AppDelegate.swift */; };
 		57962D3029DDF9F700747D54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57962D2F29DDF9F700747D54 /* SceneDelegate.swift */; };
 		57962D3229DDF9F700747D54 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57962D3129DDF9F700747D54 /* HomeViewController.swift */; };
@@ -93,6 +100,12 @@
 		5713D92029EEE28F00A7A8B5 /* Rocket3DRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket3DRouter.swift; sourceTree = "<group>"; };
 		5713D92229EEE29400A7A8B5 /* Rocket3DModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket3DModels.swift; sourceTree = "<group>"; };
 		5713D92429EEE29F00A7A8B5 /* Rocket3DConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket3DConfigurator.swift; sourceTree = "<group>"; };
+		5713D92929EF016A00A7A8B5 /* falcon_heavy.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = falcon_heavy.jpeg; sourceTree = "<group>"; };
+		5713D92A29EF016A00A7A8B5 /* falcon_heavy.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = falcon_heavy.scn; sourceTree = "<group>"; };
+		5713D92C29EF016A00A7A8B5 /* falcon_9.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = falcon_9.scn; sourceTree = "<group>"; };
+		5713D92D29EF016A00A7A8B5 /* falcon_9_fairing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = falcon_9_fairing.png; sourceTree = "<group>"; };
+		5713D92E29EF016A00A7A8B5 /* falcon_9_stage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = falcon_9_stage.png; sourceTree = "<group>"; };
+		5713D93729EF168700A7A8B5 /* falcon_1.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = falcon_1.scn; sourceTree = "<group>"; };
 		5727172229E2C862004F80BA /* SpacexApiQueries.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpacexApiQueries.graphql; sourceTree = "<group>"; };
 		5727172329E2C862004F80BA /* SpacexAPI.graphqls */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpacexAPI.graphqls; sourceTree = "<group>"; };
 		5727173B29E3090B004F80BA /* LaunchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +148,7 @@
 		5740289429E9CC84004632BD /* RocketQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RocketQuery.graphql.swift; sourceTree = "<group>"; };
 		5740289529E9CC84004632BD /* RocketNamesAndDescriptionsQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RocketNamesAndDescriptionsQuery.graphql.swift; sourceTree = "<group>"; };
 		5740289629E9CC84004632BD /* LaunchesQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchesQuery.graphql.swift; sourceTree = "<group>"; };
+		575042E029EFE33A00D6CB75 /* starship.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = starship.scn; sourceTree = "<group>"; };
 		57962D2A29DDF9F700747D54 /* SpaceX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57962D2D29DDF9F700747D54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57962D2F29DDF9F700747D54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -194,6 +208,56 @@
 				5713D92429EEE29F00A7A8B5 /* Rocket3DConfigurator.swift */,
 			);
 			path = Rocket3D;
+			sourceTree = "<group>";
+		};
+		5713D92629EF016A00A7A8B5 /* falcon_1 */ = {
+			isa = PBXGroup;
+			children = (
+				5713D93729EF168700A7A8B5 /* falcon_1.scn */,
+			);
+			path = falcon_1;
+			sourceTree = "<group>";
+		};
+		5713D92829EF016A00A7A8B5 /* falcon_heavy */ = {
+			isa = PBXGroup;
+			children = (
+				5713D92929EF016A00A7A8B5 /* falcon_heavy.jpeg */,
+				5713D92A29EF016A00A7A8B5 /* falcon_heavy.scn */,
+			);
+			path = falcon_heavy;
+			sourceTree = "<group>";
+		};
+		5713D92B29EF016A00A7A8B5 /* falcon_9 */ = {
+			isa = PBXGroup;
+			children = (
+				5713D92C29EF016A00A7A8B5 /* falcon_9.scn */,
+				5713D92D29EF016A00A7A8B5 /* falcon_9_fairing.png */,
+				5713D92E29EF016A00A7A8B5 /* falcon_9_stage.png */,
+			);
+			path = falcon_9;
+			sourceTree = "<group>";
+		};
+		5713D93529EF016F00A7A8B5 /* 3DModels */ = {
+			isa = PBXGroup;
+			children = (
+				5713D92629EF016A00A7A8B5 /* falcon_1 */,
+				5713D92B29EF016A00A7A8B5 /* falcon_9 */,
+				5713D92829EF016A00A7A8B5 /* falcon_heavy */,
+				575042DF29EFE33A00D6CB75 /* starship */,
+			);
+			path = 3DModels;
+			sourceTree = "<group>";
+		};
+		5713D93629EF081B00A7A8B5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5713D93529EF016F00A7A8B5 /* 3DModels */,
+				5713D91729EEC77C00A7A8B5 /* SpaceX.ttf */,
+				57962D3329DDF9F700747D54 /* Main.storyboard */,
+				57962D3829DDF9F900747D54 /* LaunchScreen.storyboard */,
+				57962D3629DDF9F900747D54 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		5727172629E2C866004F80BA /* SpacexAPI */ = {
@@ -352,6 +416,14 @@
 			path = Queries;
 			sourceTree = "<group>";
 		};
+		575042DF29EFE33A00D6CB75 /* starship */ = {
+			isa = PBXGroup;
+			children = (
+				575042E029EFE33A00D6CB75 /* starship.scn */,
+			);
+			path = starship;
+			sourceTree = "<group>";
+		};
 		57962D2129DDF9F700747D54 = {
 			isa = PBXGroup;
 			children = (
@@ -377,10 +449,7 @@
 				5727173A29E308F8004F80BA /* Scenes */,
 				5713D91429EEA1BC00A7A8B5 /* CustomViews */,
 				57F14CA129DF3BCE00A32207 /* Extensions */,
-				5713D91729EEC77C00A7A8B5 /* SpaceX.ttf */,
-				57962D3329DDF9F700747D54 /* Main.storyboard */,
-				57962D3829DDF9F900747D54 /* LaunchScreen.storyboard */,
-				57962D3629DDF9F900747D54 /* Assets.xcassets */,
+				5713D93629EF081B00A7A8B5 /* Resources */,
 				5727173829E2E39C004F80BA /* Application */,
 			);
 			path = SpaceX;
@@ -508,10 +577,17 @@
 			files = (
 				57962D3A29DDF9F900747D54 /* LaunchScreen.storyboard in Resources */,
 				5727172429E2C862004F80BA /* SpacexApiQueries.graphql in Resources */,
+				5713D93129EF016A00A7A8B5 /* falcon_heavy.scn in Resources */,
 				57962D3729DDF9F900747D54 /* Assets.xcassets in Resources */,
+				575042E129EFE33A00D6CB75 /* starship.scn in Resources */,
 				57962D3529DDF9F700747D54 /* Main.storyboard in Resources */,
+				5713D93829EF168800A7A8B5 /* falcon_1.scn in Resources */,
+				5713D93029EF016A00A7A8B5 /* falcon_heavy.jpeg in Resources */,
+				5713D93329EF016A00A7A8B5 /* falcon_9_fairing.png in Resources */,
+				5713D93429EF016A00A7A8B5 /* falcon_9_stage.png in Resources */,
 				5713D91829EEC77C00A7A8B5 /* SpaceX.ttf in Resources */,
 				5727172529E2C862004F80BA /* SpacexAPI.graphqls in Resources */,
+				5713D93229EF016A00A7A8B5 /* falcon_9.scn in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

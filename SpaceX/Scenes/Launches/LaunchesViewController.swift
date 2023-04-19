@@ -27,6 +27,7 @@ class LaunchesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Launches"
         navigationItem.backButtonTitle = ""
         configureCollectinView()
         addActivityIndicator()

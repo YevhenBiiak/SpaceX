@@ -29,21 +29,11 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setBackgroundImage()
-        addLogoImage()
+        setupNavigationBar()
         
         HomeConfigurator.configure(with: self)
         
         fetchItems()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        logoImageView.isHidden = false
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        logoImageView.isHidden = true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -61,29 +51,23 @@ class HomeViewController: UIViewController {
     }
     
     private func setBackgroundImage() {
-        let image = UIImage(named: "spacex_bg")?.blurred(radius: 15)
-        view.layer.contents = image?.cgImage
-        view.layer.contentsGravity = .resizeAspectFill
+//        let image = UIImage(named: "spacex_bg")?.blurred(radius: 15)
+//        view.layer.contents = image?.cgImage
+//        view.layer.contentsGravity = .resizeAspectFill
     }
     
-    private func addLogoImage() {
-        guard let navigationBar = navigationController?.navigationBar else { return }
-        navigationBar.tintColor = .white
+    private func setupNavigationBar() {
+        title = "∙∙∙spaceX∙∙∙"
         navigationItem.backButtonTitle = ""
         
-        let logo = UIImage(named: "spacex_logo")!
-        logoImageView = UIImageView(image: logo)
-        logoImageView.translatesAutoresizingMaskIntoConstraints = false
-        navigationBar.addSubview(logoImageView)
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.configureWithDefaultBackground()
+        navBarAppearance.titleTextAttributes = [.font: UIFont(name: "SpaceX", size: 22)!]
+        navBarAppearance.largeTitleTextAttributes = [.font: UIFont(name: "SpaceX", size: 40)!]
         
-        NSLayoutConstraint.activate([
-            logoImageView.widthAnchor.constraint(greaterThanOrEqualTo: navigationBar.widthAnchor, multiplier: 0.5),
-            logoImageView.widthAnchor.constraint(lessThanOrEqualTo: navigationBar.heightAnchor, multiplier: 5),
-            logoImageView.widthAnchor.constraint(lessThanOrEqualTo: navigationBar.widthAnchor, multiplier: 0.8),
-            logoImageView.widthAnchor.constraint(equalTo: logoImageView.heightAnchor, multiplier: logo.aspectRation),
-            logoImageView.centerXAnchor.constraint(equalTo: navigationBar.centerXAnchor, constant: navigationBar.frame.width * 0.055),
-            logoImageView.centerYAnchor.constraint(equalTo: navigationBar.centerYAnchor, constant: -8)
-        ])
+        navigationController?.navigationBar.standardAppearance = navBarAppearance
+        navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+        navigationController?.navigationBar.tintColor = .white
     }
 }
 
@@ -123,15 +107,23 @@ extension HomeViewController: UITableViewDelegate {
         } else {
             performSegue(withIdentifier: "Rocket", sender: nil)
         }
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        tableView.visibleCells.forEach { $0.isSelected = false }
+        // deselect all selected rows
+        tableView.subviews.forEach {
+            guard let cell = $0 as? UITableViewCell, cell.isSelected == true else { return }
+            cell.isSelected = false
+        }
+        
+        // get pan loaction
         let location = scrollView.panGestureRecognizer.location(in: tableView)
+        
+        // select row at location
         if let indexPath = tableView.indexPathForRow(at: location) {
             let cell = tableView.cellForRow(at: indexPath)
             cell?.isSelected = true
         }
     }
 }
-

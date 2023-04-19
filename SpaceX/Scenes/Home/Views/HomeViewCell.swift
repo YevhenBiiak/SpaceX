@@ -48,17 +48,8 @@ class HomeViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         contentTopConstraint.constant = selected ? 0 : 184
-        
+
         UIView.animate(withDuration: 0.33) {
-            self.layoutIfNeeded()
-        }
-    }
-    
-    override func prepareForReuse() {
-        isSelected = false
-        contentTopConstraint.constant = 184
-        
-        UIView.animate(withDuration: 0.0) {
             self.layoutIfNeeded()
         }
     }

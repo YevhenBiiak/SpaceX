@@ -15,13 +15,10 @@ class LaunchDetailsInteractor: LaunchDetailsBusinessLogic, LaunchDetailsDataStor
     
     var presenter: LaunchDetailsPresentationLogic?
     var launch: Launch!
-    
-    // MARK: Do something
-    
+        
     func showLaunch(request: LaunchDetails.ShowLaunch.Request) {
         
         let response = LaunchDetails.ShowLaunch.Response(launch: launch)
         presenter?.presentLaunch(response: response)
     }
 }
-

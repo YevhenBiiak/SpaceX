@@ -8,16 +8,16 @@
 import UIKit
 
 protocol Rocket3DDisplayLogic: AnyObject {
-    func display(viewModel: Rocket3D.UseCases.ViewModel)
+    func display(viewModel: Rocket3D.Show3DModel.ViewModel)
 }
 
 class Rocket3DPresenter: Rocket3DPresentationLogic {
     
     weak var view: Rocket3DDisplayLogic?
     
-    func presentSomething(response: Rocket3D.UseCases.Response) {
+    func present3DModel(response: Rocket3D.Show3DModel.Response) {
         
-        let viewModel = Rocket3D.UseCases.ViewModel()
+        let viewModel = Rocket3D.Show3DModel.ViewModel(filename: response.filename)
         view?.display(viewModel: viewModel)
     }
 }

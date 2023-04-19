@@ -24,8 +24,7 @@ class RocketRouter: NSObject, RocketRoutingLogic {
             var destinationDS = destinationVC.interactor as! Rocket3DDataStore
             passDataToRocket3D(source: dataStore!, destination: &destinationDS)
         } else {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let destinationVC = storyboard.instantiateViewController(withIdentifier: "Rocket3DViewController") as! Rocket3DViewController
+            let destinationVC = UIStoryboard.main.instance(of: Rocket3DViewController.self)
             var destinationDS = destinationVC.interactor as! Rocket3DDataStore
             passDataToRocket3D(source: dataStore!, destination: &destinationDS)
             navigateToRocket3D(source: viewController!, destination: destinationVC)

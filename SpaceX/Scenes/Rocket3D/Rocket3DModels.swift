@@ -11,9 +11,13 @@ enum Rocket3D {
     
     // MARK: Use cases
     
-    enum UseCases {
+    enum Show3DModel {
         struct Request {}
-        struct Response {}
-        struct ViewModel {}
+        struct Response {
+            let filename: String
+        }
+        struct ViewModel {
+            let filename: String
+        }
     }
 }

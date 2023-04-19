@@ -28,7 +28,6 @@ class RocketViewController: UIViewController {
     
     // main page
     @IBOutlet weak var mainImageView: UIImageView!
-    //@IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var firstLaunchLabel: UILabel!
     @IBOutlet weak var costPerLaunchLabel: UILabel!
     @IBOutlet weak var successRateLabel: UILabel!
@@ -89,7 +88,6 @@ class RocketViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addActivityIndicator()
-        setupNavigationBar()
         
         fetchRocket()
     }
@@ -105,6 +103,10 @@ class RocketViewController: UIViewController {
         }
     }
     
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {}
+    
+    // MARK: Private methods
+    
     private func fetchRocket() {
         let request = Rocket.FetchRocket.Request()
         interactor?.fetchRocket(request: request)
@@ -117,16 +119,6 @@ class RocketViewController: UIViewController {
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-    }
-    
-    private func setupNavigationBar() {
-        let navBarAppearance = UINavigationBarAppearance()
-        navBarAppearance.configureWithDefaultBackground()
-        navBarAppearance.titleTextAttributes = [.font: UIFont(name: "SpaceX", size: 20)!]
-        navBarAppearance.largeTitleTextAttributes = [.font: UIFont(name: "SpaceX", size: 20)!]
-                                                   
-        navigationController?.navigationBar.standardAppearance = navBarAppearance
-        navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
     }
 }
 

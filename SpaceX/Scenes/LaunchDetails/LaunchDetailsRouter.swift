@@ -27,19 +27,19 @@ class LaunchDetailsRouter: NSObject, LaunchDetailsRoutingLogic {
             let destinationVC = UIStoryboard.main.instance(of: RocketViewController.self)
             var destinationDS = destinationVC.interactor as! RocketDataStore
             passDataToRocket(source: dataStore!, destination: &destinationDS)
-            navigateToSomewhere(source: viewController!, destination: destinationVC)
+            navigateToRocket(source: viewController!, destination: destinationVC)
         }
     }
     
     // MARK: Navigation
     
-    func navigateToSomewhere(source: LaunchDetailsViewController, destination: RocketViewController) {
+    func navigateToRocket(source: LaunchDetailsViewController, destination: RocketViewController) {
         source.show(destination, sender: nil)
     }
     
     // MARK: Passing data
     
     func passDataToRocket(source: LaunchDetailsDataStore, destination: inout RocketDataStore) {
-//        destination.name = source.name
+        destination.rocketID = dataStore?.launch.rocket.id
     }
 }
