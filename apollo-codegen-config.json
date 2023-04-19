@@ -1,0 +1,29 @@
+{
+  "schemaNamespace" : "SpacexAPI",
+  "input" : {
+    "operationSearchPaths" : [
+      "**/*.graphql"
+    ],
+    "schemaSearchPaths" : [
+      "**/*.graphqls"
+    ]
+  },
+  "output" : {
+    "testMocks" : {
+      "none" : {
+      }
+    },
+    "schemaTypes" : {
+      "path" : "./SpacexAPI",
+      "moduleType" : {
+        "embeddedInTarget" : {
+          "name" : "SpaceX"
+        }
+      }
+    },
+    "operations" : {
+      "inSchemaModule" : {
+      }
+    }
+  }
+}

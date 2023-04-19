@@ -1,0 +1,111 @@
+
+query RocketNamesAndDescriptions {
+  rockets {
+    id
+    name
+    description
+  }
+}
+
+query Launches {
+  launches {
+    id
+    mission_name
+    details
+    upcoming
+    launch_date_local
+    links {
+      flickr_images
+    }
+    rocket {
+      rocket {
+        id
+        name
+        description
+        height {
+          meters
+        }
+        diameter {
+          meters
+        }
+        mass {
+          kg
+        }
+      }
+    }
+  }
+}
+
+query Rocket($id: ID!)  {
+  rocket(id: $id) {
+    id
+    name
+    active
+    first_flight
+    cost_per_launch
+    success_rate_pct
+    description
+    height {
+      meters
+      feet
+    }
+    diameter {
+      meters
+      feet
+    }
+    mass {
+      kg
+      lb
+    }
+    payload_weights {
+      name
+      kg
+      lb
+    }
+    # first stage
+    engines {
+      number
+      thrust_to_weight
+      type
+    }
+    landing_legs {
+      material
+      number
+    }
+    first_stage {
+      fuel_amount_tons
+      reusable
+      thrust_sea_level {
+        kN
+        lbf
+      }
+      thrust_vacuum {
+        kN
+        lbf
+      }
+    }
+    # second stage
+    second_stage {
+      engines
+      fuel_amount_tons
+      thrust {
+        kN
+        lbf
+      }
+      payloads {
+        composite_fairing {
+          diameter {
+            meters
+            feet
+          }
+          height {
+            meters
+            feet
+          }
+        }
+        option_1
+      }
+    }
+    wikipedia
+  }
+}
