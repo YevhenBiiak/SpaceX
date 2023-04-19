@@ -52,14 +52,10 @@ information about SpaceX's latest launches and rocket technologies.
 - Blender - to convert 3d models into a format supported by Xcode
 
 <details><summary><h2>VIDEO DEMO</h2></summary>
-  <p align=center>
-    <img width=30% src="">
-    <img width=30% src="">
-    <img width=30% src="">
-  </p>
-  <p align=center>
-    <img width=30% src="">
-    <img width=30% src="">
-    <img width=30% src="">
-  </p>
+
+  https://user-images.githubusercontent.com/80542175/233102437-017296eb-158c-40e9-b263-8c73571f6fe2.mov
+
+  https://user-images.githubusercontent.com/80542175/233102456-74c3f972-031f-4eaa-8d78-6af02ef4ac58.mov
+
 </details>
+
